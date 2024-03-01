@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.example.lab1app.controller.AppController">
+  <tabs>
+    <Tab text="Zip File Creator">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="593.0" prefWidth="920.0">
+               <children>
+                  <TextArea fx:id="selectedPathsForFilesToZip" layoutX="35.0" layoutY="74.0" prefHeight="246.0" prefWidth="235.0" promptText="Select paths" />
+                  <Label layoutX="34.0" layoutY="14.0" prefHeight="44.0" prefWidth="237.0" text="Add files path to zip" />
+                  <Button fx:id="pathSelectorForFilesToZipButton" layoutX="95.0" layoutY="344.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" text="Choose files" />
+                  <Label layoutX="383.0" layoutY="14.0" prefHeight="44.0" prefWidth="237.0" text="Set file for created zip" />
+                  <TextField fx:id="selectedPathToSetZipFile" layoutX="384.0" layoutY="62.0" prefHeight="25.0" prefWidth="235.0" promptText="Select path for zip file" />
+                  <Button fx:id="pathSelectorForEndZipFile" layoutX="444.0" layoutY="102.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" text="Choose path" />
+                  <Label layoutX="384.0" layoutY="183.0" prefHeight="44.0" prefWidth="237.0" text="Set zip file name" />
+                  <TextField fx:id="zipFileName" layoutX="385.0" layoutY="231.0" prefHeight="25.0" prefWidth="235.0" promptText="Set zip file name" />
+                  <Button fx:id="zipCreatButton" layoutX="445.0" layoutY="271.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="116.0" text="Convert" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Validation Check">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="zipFilePathTextField" layoutX="256.0" layoutY="77.0" prefHeight="25.0" prefWidth="322.0" promptText="Zip file path" />
+                  <TextField fx:id="md5FilePathTextField" layoutX="256.0" layoutY="167.0" prefHeight="25.0" prefWidth="322.0" promptText="MD5 file path" />
+                  <Label layoutX="297.0" layoutY="22.0" prefHeight="40.0" prefWidth="240.0" text="Zip file to check" />
+                  <Label layoutX="297.0" layoutY="113.0" prefHeight="40.0" prefWidth="240.0" text="Zip file to check" />
+                  <Button fx:id="chekValidationButton" layoutX="342.0" layoutY="218.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="151.0" text="Check validation" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
