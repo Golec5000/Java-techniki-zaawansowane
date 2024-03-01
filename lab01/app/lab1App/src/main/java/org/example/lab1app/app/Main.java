@@ -7,6 +7,12 @@ package org.example.lab1app.app;
  * @Version: 1.0
  *
  * @Description:
+ *
+ * On new machine, you need to run: mvn clean install, in project:
+ * controlSumCheck
+ * zipFileMaker
+ * to create jar files and dependencies in local maven repository for this project
+ *
  * For clean project structure in console run: mvn clean
  * For build project in console run: mvn compile
  * For run project in console run: mvn javafx:run
