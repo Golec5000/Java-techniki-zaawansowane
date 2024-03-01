@@ -1,0 +1,35 @@
+.root{
+    -fx-background-color: #111111;
+}
+
+.label{
+    -fx-font-size: 12;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill: #fcfcfc;
+    -fx-alignment: center;
+}
+
+.button{
+    -fx-font-size: 12;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill:  #fcfcfc;
+    -fx-alignment: center;
+    -fx-background-color: #3a6131;
+    -fx-border-color: #333333;
+}
+
+.text-field{
+    -fx-font-size: 12;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill:  #111111;
+    -fx-alignment: center;
+    -fx-border-color: #333333;
+}
+
+.text-area{
+    -fx-font-size: 12;
+    -fx-font-family: "Lucida Console";
+    -fx-text-fill:  #111111;
+    -fx-alignment: center;
+    -fx-border-color: #333333;
+}

@@ -14,7 +14,9 @@ public class Lab01Application extends Application {
     public void start(Stage stage) {
         try {
             Object root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/example/lab1app/mainPage/lab-01-main.fxml")));
+            String css = Objects.requireNonNull(this.getClass().getResource("/org/example/lab1app/basicCss/basic-style.css")).toExternalForm();
             Scene scene = new Scene((Parent) root);
+            scene.getStylesheets().add(css);
             stage.setTitle("Lab 1 App");
             stage.setScene(scene);
             stage.show();
