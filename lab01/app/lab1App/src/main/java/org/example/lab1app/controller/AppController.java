@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 
 public class AppController implements Initializable {
 
+    //Buttons
     @FXML
     private Button pathSelectorForEndZipFile;
 
@@ -32,6 +33,13 @@ public class AppController implements Initializable {
     private Button chekValidationButton;
 
     @FXML
+    private Button selectZIpFileForValidCheckButton;
+
+    @FXML
+    private Button selectMD5FileForValidCheckButton;
+
+    //TextFields
+    @FXML
     private TextField selectedPathToSetZipFile;
 
     @FXML
@@ -43,6 +51,7 @@ public class AppController implements Initializable {
     @FXML
     private TextField zipFileName;
 
+    //TextArea
     @FXML
     private TextArea selectedPathsForFilesToZip;
 
@@ -61,6 +70,9 @@ public class AppController implements Initializable {
         selectPathForZipFile();
         createZip();
         checkZip();
+
+        selectZipFileForValidCheck();
+        selectMD5FileForValidCheck();
 
     }
 
@@ -175,6 +187,40 @@ public class AppController implements Initializable {
         });
     }
 
+    private void selectZipFileForValidCheck() {
+        selectZIpFileForValidCheckButton.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            File selectedFile = fileChooser.showOpenDialog(null);
+
+            if (selectedFile != null) {
+                zipFilePathTextField.setText(selectedFile.getAbsolutePath());
+            } else {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Error selecting file");
+                alert.setHeaderText("Error selecting file");
+                alert.setContentText("Error selecting file");
+                alert.showAndWait();
+            }
+        });
+    }
+
+    private void selectMD5FileForValidCheck() {
+        selectMD5FileForValidCheckButton.setOnAction(event -> {
+            FileChooser fileChooser = new FileChooser();
+            File selectedFile = fileChooser.showOpenDialog(null);
+
+            if (selectedFile != null) {
+                md5FilePathTextField.setText(selectedFile.getAbsolutePath());
+            } else {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Error selecting file");
+                alert.setHeaderText("Error selecting file");
+                alert.setContentText("Error selecting file");
+                alert.showAndWait();
+            }
+        });
+    }
+
     private void createZip() {
         zipCreatButton.setOnAction(event -> {
 
@@ -223,6 +269,10 @@ public class AppController implements Initializable {
                 alert.setHeaderText("Zip file is valid");
                 alert.setContentText("Zip file is valid");
                 alert.showAndWait();
+
+                zipFilePathTextField.clear();
+                md5FilePathTextField.clear();
+
             } else {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Zip file is not valid");

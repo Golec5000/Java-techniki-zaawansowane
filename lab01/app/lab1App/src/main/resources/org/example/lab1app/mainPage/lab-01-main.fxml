@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="org.example.lab1app.controller.AppController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="849.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lab1app.controller.AppController">
   <tabs>
     <Tab text="Zip File Creator">
       <content>
@@ -32,9 +32,11 @@
                <children>
                   <TextField fx:id="zipFilePathTextField" layoutX="256.0" layoutY="77.0" prefHeight="25.0" prefWidth="322.0" promptText="Zip file path" />
                   <TextField fx:id="md5FilePathTextField" layoutX="256.0" layoutY="167.0" prefHeight="25.0" prefWidth="322.0" promptText="MD5 file path" />
-                  <Label layoutX="297.0" layoutY="22.0" prefHeight="40.0" prefWidth="240.0" text="Zip file to check" />
-                  <Label layoutX="297.0" layoutY="113.0" prefHeight="40.0" prefWidth="240.0" text="Zip file to check" />
+                  <Label layoutX="256.0" layoutY="22.0" prefHeight="40.0" prefWidth="323.0" text="Zip file to check" />
+                  <Label layoutX="256.0" layoutY="113.0" prefHeight="40.0" prefWidth="322.0" text="MD5 file to comfire check valid" />
                   <Button fx:id="chekValidationButton" layoutX="342.0" layoutY="218.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="151.0" text="Check validation" />
+                  <Button fx:id="selectZIpFileForValidCheckButton" layoutX="598.0" layoutY="67.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="122.0" text="Select zip file" />
+                  <Button fx:id="selectMD5FileForValidCheckButton" layoutX="598.0" layoutY="157.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="122.0" text="Select MD5 file" />
                </children></AnchorPane>
       </content>
     </Tab>
